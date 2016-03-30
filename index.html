@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+ 	<head>
+    	<title>Jourmap</title>
+		<script src="jourmap-plugin.js"></script>
+		<script>
+		function openJourmapPopup() {
+			JM.popup({ query: document.getElementById("place_name").innerText });
+		}
+		</script>
+	</head>
+	<body>
+		<button onclick="openJourmapPopup()">Add to Jourmap</button>
+		<h3 id="place_name">Windsor Castle</h3>
+	</body>
+</html>
