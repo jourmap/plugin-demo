@@ -4,6 +4,7 @@
 		popup: function(args) {
 			if (args && args.query) {
 				var dialog = document.createElement('div');
+				dialog.className = "jm-dialog-wrapper";
 				dialog.style.position = "fixed";
 				dialog.style.zIndex = "10000";
 				dialog.style.left = 0;
@@ -11,10 +12,21 @@
 				dialog.style.right = 0;
 				dialog.style.bottom = 0;
 				dialog.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+				var flexBox = document.createElement('div');
+				flexBox.style.position = "relative";
+				flexBox.style.width = "100%";
+				flexBox.style.height = "100%";
+				flexBox.style.display = "flex";
+				flexBox.style.flexDirection = "row";
+				flexBox.style.alignItems = "center";
+				flexBox.style.justifyContent = "center";
 				var wrap = document.createElement('div');
-				wrap.style.maxWidth = "360px";
-				wrap.style.height = "400px";
-				wrap.style.margin = "100px auto";
+				wrap.style.minWidth = "320px";
+				wrap.style.maxWidth = "400px";
+				wrap.style.width = "100%";
+				wrap.style.height = "100%";
+				wrap.style.maxHeight = "80%";
+				// wrap.style.margin = "auto";
 				wrap.style.display = "block";
 				wrap.style.borderRadius = "3px";
 				wrap.style.overflow = "hidden";
@@ -27,7 +39,8 @@
 				iframe.style.width = "100%";
 				iframe.style.height = "100%";
 				wrap.appendChild(iframe);
-				dialog.appendChild(wrap);
+				flexBox.appendChild(wrap);
+				dialog.appendChild(flexBox);
 				dialog.addEventListener("click", function() {
 					document.body.removeChild(dialog);
 				});

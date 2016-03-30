@@ -2,6 +2,13 @@
 <html>
  	<head>
     	<title>Jourmap</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<style>
+		#btn-add {
+			border: 1px solid grey;
+			border-radius: 2px;
+		}
+		</style>
 		<script src="jourmap-plugin.js"></script>
 		<script>
 		function openJourmapPopup() {
@@ -10,7 +17,15 @@
 		</script>
 	</head>
 	<body>
-		<button onclick="openJourmapPopup()">Add to Jourmap</button>
-		<h3 id="place_name">Windsor Castle</h3>
+		<div style="max-width:600px; margin: 0 auto; text-align:center;">
+			<h3 id="place_name">Windsor Castle</h3>
+			<div>
+				<button id="btn-add" onclick="openJourmapPopup()">Add to Jourmap</button>
+			</div>
+			<div>
+				<br />
+				<a href="https://github.com/jourmap/plugin-demo" target="_blank">Integrate with Jourmap</a>
+			</div>
+		</div>
 	</body>
 </html>
