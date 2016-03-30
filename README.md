@@ -9,7 +9,7 @@ Include js file
 
 Open Jourmap dialog with place name
 ```javascript
-function openJourmapPopup() {
-	JM.popup({ query: document.getElementById("place_name").innerText });
-}
+JM.popup({ 
+	query: place_name //replace place_name
+});
 ```
