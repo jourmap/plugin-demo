@@ -3,7 +3,12 @@
 	window.JM = {
 		popup: function(args) {
 			if (args && args.query) {
-				var dialog = document.createElement('div');
+				var dialog = document.getElementById("jm-popup");
+				if (dialog) {
+					return;
+				}
+				dialog = document.createElement('div');
+				dialog.id = "jm-popup";
 				dialog.className = "jm-dialog-wrapper";
 				dialog.style.position = "fixed";
 				dialog.style.zIndex = "10000";
