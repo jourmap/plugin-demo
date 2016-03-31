@@ -4,7 +4,7 @@
 
 Include js file
 ```xml
-<script src="https://raw.githubusercontent.com/jourmap/plugin-demo/gh-pages/jourmap-plugin.js"></script>
+<script src="http://jourmap.github.io/plugin-demo/jourmap-plugin.js"></script>
 ```
 
 Open Jourmap dialog with place name
